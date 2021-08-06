@@ -1,11 +1,13 @@
 import { useParams } from 'react-router-dom'
 
 import Card from "../Card";
-import { initialDecks } from "../../mockdata/CardData";
+// import { initialDecks } from "../../mockdata/CardData";
+import { useAppContext } from '../../context/AppContext';
 
 const Deck = () => {
   const { id } = useParams();
-  const decks = initialDecks;
+  // const decks = initialDecks;
+  const { decks } = useAppContext();
 
   const deck = decks[id];
 
